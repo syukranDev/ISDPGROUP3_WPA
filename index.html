@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>HAWA 2.0</title>
+        <link rel="icon" href="img/tech.svg">
+        <meta name="description" content="">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <!-- My CSS -->
+        <link rel="stylesheet" href="style.css">
+        <!-- ChartJs -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+        <!-- Leaflet FW -->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
+        <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
+        <!-- Boostrap FW -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+       
+
+    </head>
+    <body class="">
+        <!-- Navbar -->
+        <nav class="navbar navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">
+                <img src="img/tech.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+                ISDP - HAWA 2.0 
+            </a>  
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>  
+        </nav>
+
+        <!-- Body content -->
+        <div class="container">
+            <p class="m-3 text-center"> Welcome, Mr Syukran. (<span id="current_time"></span>)</p>
+
+            <hr>
+
+            <!-- Row 1 -->
+            <div class="row border-row">
+                <div class="col-sm border-col mb-3">
+                    <div class="card shadow-sm" style="">
+                        <div class="card-header text-center text-white bg-danger ">
+                            Body Temperature
+                        </div>
+                        <div class="card-body text-center"> 
+                            <p class="card-text mb-0"> Current Temperature: <span class="text-success">32&#xb0 C</span></p>
+                            <p class="card-text"> Average Temperature : <span class="text-success">33.3&#xb0 C</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm border-col mb-3">
+                    <div class="card shadow-sm" style="">
+                        <div class="card-header text-center text-white bg-danger ">
+                            Heart Rate (BPM)
+                        </div>
+                        <div class="card-body" style="padding: 0.120rem">
+                            <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                            <canvas id="myChart"></canvas>
+                        </div>
+                    </div> 
+                </div>
+                <div class="col-sm border-col mb-3">
+                    <div class="card shadow-sm" style="">
+                        <div class="card-header text-center text-white bg-danger ">
+                            Human Positioning
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text text-center mb-0">Current Position: <span class="blink text-success">Standing</span></p>
+                            <p class="card-text text-center">X/Y/Z Angle: <span class="blink text-success">34&#xb0/42&#xb0/12&#xb0</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Row 2 -->
+            <div class="row border-row">
+                <div class="col-sm border-col mb-3">
+                    <div class="card shadow-sm" style="">
+                        <div class="card-header text-center text-white bg-danger ">
+                            Location Mapping
+                        </div>
+                        <div class="card-body" style="padding:0">
+                            <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                            <div id="mapid"></div>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+
+            <!-- Row 3 -->
+            <div class="row border-row">
+                <div class="col-sm border-col mb-3">
+                    <div class="card shadow-sm" style="">
+                        <div class="card-header text-center text-white bg-danger ">
+                            Battery Management
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+        </div>   
+
+
+    
+        <!-- Internal Script -->
+        <script>
+            //Location Mapping
+            var mymap = L.map('mapid').setView([4.3883426, 100.9694079], 14);
+
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 17,
+                //attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(mymap);
+
+            var marker = L.marker([4.3883426, 100.9694079]).addTo(mymap);
+
+            //ChartJs
+            var ctx = document.getElementById('myChart').getContext('2d');
+            var chart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['5.15PM','5.20PM','5.25PM','5.30PM','5.35PM','5.40PM','5.45PM'],
+                    datasets: [{
+                        //label: 'My First dataset',
+                        backgroundColor: false,
+                        borderColor: 'rgb(255, 99, 132)',
+                        data: [0, 10, 5, 2, 20, 30, 45],
+                        
+                    }]
+                },
+
+                // Configuration options go here
+                options: { 
+                        legend: {
+                            display: false,
+                        },
+
+                        scales: {
+                            xAxes: [{
+                                gridLines: {
+                                    display:false
+                                }
+                            }],
+                            yAxes: [{
+                                gridLines: {
+                                    display:false
+                                }   
+                            }]
+                        }
+                }
+            });
+
+
+            //Current Real Time
+            Date.prototype.getCurrentTime = function(){ 
+                return ((this.getHours() < 10)?"0":"") + ((this.getHours()>12)?(this.getHours()-12):this.getHours()) +":"+ ((this.getMinutes() < 10)?"0":"") + this.getMinutes() +":"+ ((this.getSeconds() < 10)?"0":"") + this.getSeconds() + ((this.getHours()>12)?(' PM'):' AM'); 
+                };
+    
+                function realtime()
+                {
+                var today = new Date(); //date object
+                var current_date = today.getDate();
+                var current_month = today.getMonth()+1; //Month starts from 0
+                var current_year =  today.getFullYear();
+                var current_time = today.getCurrentTime();
+                var realtime = current_month+"/"+current_date+"/"+current_year+' - '+current_time;
+                $("#current_time").html(realtime);
+                }
+    
+                //update current date and time every 1 sec
+                setInterval(function(){ realtime(); }, 1000);
+        </script>
+
+        <!-- Optional JavaScript -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    </body>
+</html>
