@@ -1,23 +1,13 @@
-/* .border-col {
-    border: 2px solid blue;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap');
+
+.bgColor {
+    /* background-color: grey; */
 }
 
-.border-row {
-    border: 2px dotted red;
-} */
-
-@import url('https://fonts.googleapis.com/css?family=Roboto:900&display=swap');
-
-.content-font {
-    font-family: 'Roboto', sans-serif;
-    font-size: 18px;
-    letter-spacing: 0.5px;
-}
-
-#mapid { height: 220px; }
-
-.height-same {
-    height: 220px;
+.cardNoGap{
+    padding-top: 0;  
+    padding-left: 0;
+    padding-right: 0;  
 }
 
 @-webkit-keyframes blinker {

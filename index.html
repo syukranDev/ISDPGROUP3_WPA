@@ -1,184 +1,272 @@
-<!DOCTYPE html>
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>HAWA 2.0</title>
-        <link rel="icon" href="img/tech.svg">
-        <meta name="description" content="">
-        <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-        <!-- My CSS -->
-        <link rel="stylesheet" href="style.css">
-        <!-- ChartJs -->
-        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-        <!-- Leaflet FW -->
-        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
-        <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
-        <!-- Boostrap FW -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="icon" href="static/icons/0.png" type="image/gif" sizes="16x16">
+    <title>ISDP | Team 3</title>
+    <link rel="icon" href="team.svg" type="image/x-icon" sizes="16x16">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
+
+    <script src="https://kit.fontawesome.com/e52140b373.js" crossorigin="anonymous"></script>
+    <script src="chart.js"></script>
+
+    
+    
+
+    
+</head>
+<body class="bgColor">
+    <nav class="navbar shadow-sm navbar-light bg-light">
+        <a class="navbar-brand  href="#">
+            
+            <i class="fas fa-heartbeat mr-1"></i>ISDP Jan 2020 | Group 3
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Overview <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Analytic</a>
+            </li>
+            <li class="nav-item">
+                <!-- <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Soon..</a> -->
+                <a class="nav-link disabled" href="#">Group Member</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Soon..</a>
+            </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div class="container mb-2">
+        <h1 class="text-center m-2">Good Afternoon, Sir!</h1>
+        <p class="text-center">
+            <span id="update_time"></span>
+            <span class="blink" id="runtime"></span>
+            <p class="m-0 blink text-center"><span class="text-white bg-dark"><em> under construction | mock data only :)</em></span></p>            
+        </p>
+        <hr>
+
+        <div class=row>
+           <div class="col-sm-6 ">
+                <div class="card shadow-sm bg-light mb-3 d-flex" style="">
+                    <div class="card-header">Overview</div>
+                    <div class="card-body">
+                        <h5 class="card-title "><i class="fas fa-heartbeat mr-1"></i>Your heart condition is <span class="text-success blink"> excellent :)</span></h5>
+                        <h5 class="card-title "><i class="fas fa-thermometer-half mr-2"></i>Your body temperature <span class="text-danger blink"> a bit warm :| </span></h5>
+                        <h5 class="card-title "><i class="fas fa-walking mr-2"></i>Now you are<span class="text-success blink"> standing :)</span></h5>
+                        <h5 class="card-title "><i class="fas fa-street-view mr-2"></i>You are at <span class="text-success blink">UTP Lake :)</span></h5>
+                    </div>
+                </div>
+            </div>
        
 
-    </head>
-    <body class="">
-        <!-- Navbar -->
-        <nav class="navbar navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">
-                <img src="img/tech.svg" width="30" height="30" class="d-inline-block align-top" alt="">
-                ISDP - HAWA 2.0 
-            </a>  
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                </button>  
-        </nav>
-
-        <!-- Body content -->
-        <div class="container">
-            <p class="m-3 text-center"> Welcome, Mr Syukran. (<span id="current_time"></span>)</p>
-
-            <hr>
-
-            <!-- Row 1 -->
-            <div class="row border-row">
-                <div class="col-sm border-col mb-3">
-                    <div class="card shadow-sm" style="">
-                        <div class="card-header text-center text-white bg-danger ">
-                            Body Temperature
+            <div class="col-sm-6 text-center">
+                <div class="card shadow-sm bg-light mb-3">
+                    <div class="card-header">Your Heart Rate <span><em>(Last 5 minutes)</em></span></div>
+                    <div class="card-body">
+                        <!-- <h5 class="card-title text-center">Your heart condition is <span class="text-success blink">good :)</span></h5> -->
+                        <div>
+                            <canvas id="chartTemp" height="350" width="600"></canvas>
                         </div>
-                        <div class="card-body text-center"> 
-                            <p class="card-text mb-0"> Current Temperature: <span class="text-success">32&#xb0 C</span></p>
-                            <p class="card-text"> Average Temperature : <span class="text-success">33.3&#xb0 C</span></p>
-                        </div>
+                        <!-- <div><canvas id="speedChart" height="350" width="600"></canvas></div> -->
+                        <p class="card-text text-center">Current:123BPM | Min: 111BPM | Max: 143BPM</p>
+                        <p class="m-0"><span class="text-white bg-dark"><<em>chart goes here</em>></span></p>
+
                     </div>
                 </div>
-                <div class="col-sm border-col mb-3">
-                    <div class="card shadow-sm" style="">
-                        <div class="card-header text-center text-white bg-danger ">
-                            Heart Rate (BPM)
-                        </div>
-                        <div class="card-body" style="padding: 0.120rem">
-                            <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
-                            <canvas id="myChart"></canvas>
-                        </div>
-                    </div> 
+            </div>
+        </div>
+
+        <!-- Row 2 -->
+
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <div class="card shadow-sm bg-light mb-3" style="">
+                    <div class="card-header">Your Current Location</div>
+                    <div class="card-body" style="padding-top:0;padding-right:0;padding-left:0; padding-bottom:0">
+                        <!-- <h5 class="card-title">Temperature</h5> -->
+                        <!-- Map goes here -->
+                        <div id="mapid" class="shadow-sm" style="width: 100%; height: 400px;"></div>  
+                        <p class="card-text text-center p-2">Longitude: 4.3838 |  Latitude: 100.9709</p>  
+                    </div>
                 </div>
-                <div class="col-sm border-col mb-3">
-                    <div class="card shadow-sm" style="">
-                        <div class="card-header text-center text-white bg-danger ">
-                            Human Positioning
-                        </div>
-                        <div class="card-body">
-                            <p class="card-text text-center mb-0">Current Position: <span class="blink text-success">Standing</span></p>
-                            <p class="card-text text-center">X/Y/Z Angle: <span class="blink text-success">34&#xb0/42&#xb0/12&#xb0</span></p>
-                        </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6 text-center">
+                <div class="card shadow-sm bg-light mb-3" >
+                    <div class="card-header">Human Activity Recognition</div>
+                    <div class="card-body" style="">
+                        <p class="m-0"><span class="text-white bg-dark"><<em>chart goes here</em>></span></p>
+                        <h5 class="card-title blink text-primary">Standing :)</h5>
+                        <p class="card-text">X-Coordinates: 23123.123</p>
+                        <p class="card-text">Y-Coordinates: 345.34</p>
+                        <p class="card-text">Z-Coordinates: 8844.30 </p>
                     </div>
                 </div>
             </div>
 
-            <!-- Row 2 -->
-            <div class="row border-row">
-                <div class="col-sm border-col mb-3">
-                    <div class="card shadow-sm" style="">
-                        <div class="card-header text-center text-white bg-danger ">
-                            Location Mapping
-                        </div>
-                        <div class="card-body" style="padding:0">
-                            <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
-                            <div id="mapid"></div>
-                        </div>
+            <div class="col-sm-6 text-center">
+                <div class="card shadow-sm bg-light w-100" >
+                    <div class="card-header">Power Management</div>
+                    <div class="card-body">
+                        <p class="m-0"><span class="text-white bg-dark"><<em>chart goes here</em>></span></p>
+                        <h5 class="card-title blink text-primary">Battery is at 95% :)</h5>
+                        <p class="card-text">Voltage: 5.5V</p>
+                        <p class="card-text">Current: 1.2A</p>
+                        <p class="card-text">Times Remaining: 4 hours </p>
                     </div>
-                </div>  
+                </div>
             </div>
 
-            <!-- Row 3 -->
-            <div class="row border-row">
-                <div class="col-sm border-col mb-3">
-                    <div class="card shadow-sm" style="">
-                        <div class="card-header text-center text-white bg-danger ">
-                            Battery Management
-                        </div>
-                        <div class="card-body">
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                    </div>
-                </div>  
-            </div>
-        </div>   
+
+        </div>
 
 
+       
+
+
+
+
+    </div>
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        //--------------------------
+        // Get current date and time
+        //--------------------------
+        Date.prototype.getCurrentTime = function(){ 
+        return ((this.getHours() < 10)?"0":"") + ((this.getHours()>12)?(this.getHours()-12):this.getHours()) +":"+ ((this.getMinutes() < 10)?"0":"") + this.getMinutes() +":"+ ((this.getSeconds() < 10)?"0":"") + this.getSeconds() + ((this.getHours()>12)?(' PM'):' AM'); 
+        };
     
-        <!-- Internal Script -->
-        <script>
-            //Location Mapping
-            var mymap = L.map('mapid').setView([4.3883426, 100.9694079], 14);
+        function realtime()
+        {
+        var today = new Date(); //date object
+        var current_date = today.getDate();
+        var current_month = today.getMonth()+1; //Month starts from 0
+        var current_year =  today.getFullYear();
+        var current_time = today.getCurrentTime();
+        var realtime = current_month+"/"+current_date+"/"+current_year+' - '+current_time;
+        $("#update_time").html(realtime);
+        }
+    
+        //update current date and time every 1 sec
+        setInterval(function(){ realtime(); }, 1000);
 
-            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                maxZoom: 17,
-                //attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            }).addTo(mymap);
 
-            var marker = L.marker([4.3883426, 100.9694079]).addTo(mymap);
+        //--------------------------
+        // Location Indoor Map
+        //--------------------------
+        var mymap = L.map('mapid').setView([4.3838, 100.9709],16);
+        var circle = L.marker([4.3838, 100.973]).addTo(mymap).bindPopup('You are here!').openPopup();
+      
+        L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+            maxZoom: 18,
+            //attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+            //    '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+            //    'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+            id: 'mapbox/streets-v11',
+            tileSize: 512,
+            zoomOffset: -1
+        }).addTo(mymap);
 
-            //ChartJs
-            var ctx = document.getElementById('myChart').getContext('2d');
-            var chart = new Chart(ctx, {
-                type: 'line',
-                data: {
-                    labels: ['5.15PM','5.20PM','5.25PM','5.30PM','5.35PM','5.40PM','5.45PM'],
-                    datasets: [{
-                        //label: 'My First dataset',
-                        backgroundColor: false,
-                        borderColor: 'rgb(255, 99, 132)',
-                        data: [0, 10, 5, 2, 20, 30, 45],
-                        
-                    }]
-                },
+        //--------------------------
+        // Temperature Chart
+        //--------------------------
+        var lineChartData = {
+            labels: ["0", "5", "7.5", "10", "11", "12", "13", "15"],
+            datasets: [{
+                    label: "SES 3.4",
+                    fillColor: "rgba(255,255,255,0)",
+                    strokeColor: "rgba(16,133,135,1)",
+                    pointColor: "rgba(16,133,135,1)",
+                    pointStrokeColor: "#fff",
+                    pointHighlightFill: "#fff",
+                    pointHighlightStroke: "rgba(16,133,135,1)",
+                    data: ["128.940", "131.397", "132.235", "128.235", "125.636", "127.271", "125.667", "129.554"]
+            }, {
+                    label: "SES 5.6",
+                    fillColor: "rgba(255,255,255,0)",
+                    strokeColor: "rgba(82,185,159,1)",
+                    pointColor: "rgba(82,185,159,1)",
+                    pointStrokeColor: "#fff",
+                    pointHighlightFill: "#fff",
+                    pointHighlightStroke: "rgba(82,185,159,1)",
+                    data: ["128.948", "130.369", "131.038", "125.867", "121.893", "119.656", "119.026", "119.737"]
+            }, {
+                    label: "SES 6.7",
+                    fillColor: "rgba(255,255,255,0)",
+                    strokeColor: "rgba(242,175,62,1)",
+                    pointColor: "rgba(242,175,62,1)",
+                    pointStrokeColor: "#fff",
+                    pointHighlightFill: "#fff",
+                    pointHighlightStroke: "rgba(242,175,62,1)",
+                    data: ["127.473", "128.983", "129.327", "123.416", "118.829", "116.843", "117.190", "115.215"]
+            }, {
+                    label: "SES 8.9",
+                    fillColor: "rgba(255,255,255,0)",
+                    strokeColor: "rgba(236,83,62,1)",
+                    pointColor: "rgba(236,83,62,1)",
+                    pointStrokeColor: "#fff",
+                    pointHighlightFill: "#fff",
+                    pointHighlightStroke: "rgba(236,83,62,1)",
+                    data: ["127.283", "125.147", "124.489", "116.783", "111.696", "110.563", "105.469", "104.332"]
+            }]
 
-                // Configuration options go here
-                options: { 
-                        legend: {
-                            display: false,
-                        },
+    }
 
-                        scales: {
-                            xAxes: [{
-                                gridLines: {
-                                    display:false
-                                }
-                            }],
-                            yAxes: [{
-                                gridLines: {
-                                    display:false
-                                }   
-                            }]
-                        }
-                }
+    window.onload = function() {
+            var ctx = document.getElementById("chartTemp").getContext("2d");
+            window.myLine = new Chart(ctx).Line(lineChartData, {
+                    responsive: true
             });
+    }
 
+    </script>
 
-            //Current Real Time
-            Date.prototype.getCurrentTime = function(){ 
-                return ((this.getHours() < 10)?"0":"") + ((this.getHours()>12)?(this.getHours()-12):this.getHours()) +":"+ ((this.getMinutes() < 10)?"0":"") + this.getMinutes() +":"+ ((this.getSeconds() < 10)?"0":"") + this.getSeconds() + ((this.getHours()>12)?(' PM'):' AM'); 
-                };
-    
-                function realtime()
-                {
-                var today = new Date(); //date object
-                var current_date = today.getDate();
-                var current_month = today.getMonth()+1; //Month starts from 0
-                var current_year =  today.getFullYear();
-                var current_time = today.getCurrentTime();
-                var realtime = current_month+"/"+current_date+"/"+current_year+' - '+current_time;
-                $("#current_time").html(realtime);
-                }
-    
-                //update current date and time every 1 sec
-                setInterval(function(){ realtime(); }, 1000);
-        </script>
+    <!-- Optional JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+<footer>
+    <div class="footer-copyright text-center py-3">© 2020 ISDP GROUP3 | SYUKRAN, MUAZ, AFIFA AMIERA, ELVERN, YASMIN
+        <!-- <a href="http://isdpfinalyear.epizy.com/"> :) </a> -->
+    </div>
+</footer>
 
-        <!-- Optional JavaScript -->
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    </body>
 </html>
