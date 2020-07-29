@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Refresh for every 30sec -->
+    <!-- <meta http-equiv="refresh" content="30" >   -->
+    
+    <link rel="icon" href="static/icons/0.png" type="image/gif" sizes="16x16">
+    <title>ISDP | Team 3</title>
+    <link rel="icon" href="team.svg" type="image/x-icon" sizes="16x16">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    
+    <!----------- External JS IMPORT ------------------->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <!-- Font Awesome Js -->
+    <script src="https://kit.fontawesome.com/e52140b373.js" crossorigin="anonymous"></script>
+    <!-- ChartJs -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <!-- ApexChart -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <!-- Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
+    <script src="leaflet-providers.js"></script>
+    <script src="https://unpkg.com/leaflet-ant-path" type="text/javascript"></script>
+
+    <!-- <script src="chart.js"></script> -->
+    <!------------------  Internal JS IMPORT  --------------------->
+    <script src="parseData.js"></script>
+    <script src="chartData.js"></script>
+    <script src="chartData2.js"></script>
+    <script src="chartData3.js"></script>
+    <script src="chartData4.js"></script>
+    <script src="chartData5.js"></script>
+    <script src="chartData6.js"></script> 
+
+    
+
+
+    
+
+    
+    
+<!-- #F8CDDA, #1D2B64,#F8CDDA -->
+<!-- background-image: linear-gradient(#E0EAFC, #CFDEF3,#E0EAFC); -->
+    
+</head>
+<body class="#" style="">
+    <nav class="navbar shadow-sm navbar-light bg-light">
+        <a class="navbar-brand  href="index.html">
+            
+            <i class="fas fa-heartbeat mr-1"></i>ISDP Jan 2020 | Group 3
+        </a>
+        <button  class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Overview <span class="sr-only">(current)</span></a>
+            </li>
+            <!-- <li class="nav-item">
+                <a class="nav-link" href="#">Analytic</a>
+            </li> -->
+            <li class="nav-item active">
+                <a class="nav-link" href="analytic.html">Data-Table</a>
+            </li>
+            <li class="nav-item active">
+                <!-- <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Soon..</a> -->
+                <a class="nav-link" href="groupmates.html">Group Members</a>
+            </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div class="container mb-2">
+        <h3 class="text-center  mt-4 m-2 mt-3">Hello, Syukran! 👋</h3> 
+        <p class="text-center">
+            <span id="update_time"></span>
+            <span class="blink" id="runtime"></span>
+            <p class="text-center"><a href="analytic.html">Browse Data</a> | <a href="groupmates.html">Team Members</a></p>
+            <!-- <p class="m-0 blink text-center"><span class="text-danger #bg-dark">👷 under maintenance 🚧</span></p>             -->
+            <!-- <h6>Auto-refresh every 10 sec</h6> -->
+        </p>
+        <hr>
+
+        <div class=row>
+           <div class="col-sm-6 ">
+                <div class="card shadow-sm bg-light mb-3 d-flex" style="">
+                    <div class="card-header text-center textHeader ">Overview</div>
+                    <div class="card-body">
+                        <!-- one unique ID can be used in one html div only --SETTLE THIS LATER -->
+                        <h5 class="card-title text-center "><i class="text-danger  "></i><span class="pm-2">💖</span>Current Heartbeat: <span class="text-info blink"><span id="currentBPM"></span> BPM</span></h5>
+                        <h5 class="card-title text-center"><i class="text-danger  "></i><span class="pm-2">🌡</span>Body Temperature: <span class="text-danger blink"><span id="currentTemp"></span>&#176C</span></h5>
+                        <h5 class="card-title text-center "><i class="text-danger  "></i><span class="pm-2">🚶‍♂️</span>Your Position: <span class="text-info blink"><span id="currentAction"></span></span></h5>
+                        <h5 class="card-title text-center"><i class="text-danger  "></i><span class="pm-2">🗺</span>Your Location: <span class="text-danger blink">[<span id="currentLocation_X"></span>,<span id="currentLocation_Y"></span>]</span></h5>
+                    </div>
+                </div>
+            </div>
+       
+            <!--fas fa-heartbeat // fas fa-thermometer-half // fas fa-walking // fas fa-street-view -->
+
+            <div class="col-sm-6 text-center">
+                <div class="card shadow-sm bg-light mb-3">
+                    <div class="card-header">Your Location</div>
+                    <div class="card-body" style="padding-top:0;padding-right:0;padding-left:0; padding-bottom:0">
+                        <!-- <h5 class="card-title">Temperature</h5> -->
+                        <!-- Map goes here -->
+                        <div id="mapid" class="shadow-sm" style="width: 100%; height: 400px;"></div>  
+                        <!-- <p class="card-text text-center p-2">Longitude: 4.3838 |  Latitude: 100.9709</p>   -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Row 2 -->
+
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <div class="card shadow-sm bg-light mb-3" style="">
+                    <div class="card-header">Your Heart Rate & Temperature <span><em>(Last 5 seconds)</em></span></div>
+                    <div class="card-body">
+                        <!-- <h5 class="card-title text-center">Your heart condition is <span class="text-success blink">good :)</span></h5> -->
+                        <div>
+                            <!-- height="350" width="600" -->
+                            <!-- <canvas id="chartTemp" ></canvas> -->
+                            <div class="row">
+                                <div class="col-sm-6 text-center">
+                                    <canvas id="myChart2"></canvas>
+                                    <p class="card-text text-center">Now: <span id=currentBPM2 class="text-danger"></span> BPM | Min: <span id=minBPM></span> BPM | Max:  <span id=maxBPM></span> BPM</p>
+                                    <hr class="mb-n1">
+                                </div>
+                                <div class="col-sm-6 text-center">
+                                    <canvas id="myChart"></canvas>
+                                    <p class="card-text text-center">Now: <span id=currentTemp2 class="text-danger"></span> &#8451 | Min: <span id=minTemp></span> &#8451 | Max:  <span id=maxTemp></span> &#8451</p>
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
+                        <!-- <div><canvas id="speedChart" height="350" width="600"></canvas></div> -->
+                        
+                        <!-- <p class="m-0"><span class="text-white bg-dark"><<em>chart goes here</em>></span></p> -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6 text-center">
+                <div class="card shadow-sm bg-light mb-3" >
+                    <div class="card-header">Human Activity Recognition</div>
+                    <div class="card-body" style="">
+                        <!-- <p class="m-0"><span class="text-white bg-dark"><<em>chart goes here</em>></span></p> -->
+                        <h5 class="card-title blink text-primary"><span id="currentAction1"></span> :)</h5>
+                        <p class="card-text text-center mb-n1">X: <span id=valueX></span> &#176 | Y: <span id=valueY></span> &#176 | Z:  <span id=valueZ></span> &#176</p>
+                        <hr class="mb-n1">
+                        <canvas id="myChart3" height="100"></canvas>
+                        <canvas id="myChart4" height="100"></canvas>
+                        <canvas id="myChart5" height="100"></canvas>
+                        <!-- <p class="card-text text-center">Current: <span id=currentTemp></span> C | Min: <span id=minTemp></span> C | Max:  <span id=maxTemp></span> C</p> -->
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 text-center">
+                <div class="card shadow-sm bg-light w-100" >
+                    <div class="card-header">Power Management</div>
+                    <div class="card-body">
+                        <!-- <p class="m-0"><span class="text-white bg-dark"><<em>chart goes here</em>></span></p> -->
+                        <h5 class="card-title blink text-primary">Battery Percentage <span id="currentPercentage"></span>%</h5>
+                        <p class="card-text">Voltage: <span id="currentVolt"></span>V | Current: <span id=currentAmp></span>A | Times Remaining: <span id="timeLeft"></span> Hour</p>
+                        <canvas id="myChart6" height="100"></canvas>
+                        
+                        <!-- <p class="card-text">Voltage: 5.5V</p>
+                        <p class="card-text">Current: 1.2A</p>
+                        <p class="card-text">Times Remaining: 4 hours </p> -->
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+       
+
+
+
+
+    </div>
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        //--------------------------
+        // Get current date and time
+        //--------------------------
+        Date.prototype.getCurrentTime = function(){ 
+        return ((this.getHours() < 10)?"0":"") + ((this.getHours()>12)?(this.getHours()-12):this.getHours()) +":"+ ((this.getMinutes() < 10)?"0":"") + this.getMinutes() +":"+ ((this.getSeconds() < 10)?"0":"") + this.getSeconds() + ((this.getHours()>12)?(' PM'):' AM'); 
+        };
+    
+        function realtime()
+        {
+        var today = new Date(); //date object
+        var current_date = today.getDate();
+        var current_month = today.getMonth()+1; //Month starts from 0
+        var current_year =  today.getFullYear();
+        var current_time = today.getCurrentTime();
+        var realtime = current_date+"/"+current_month+"/"+current_year+' - '+current_time;
+        $("#update_time").html(realtime);
+        }
+    
+        //update current date and time every 1 sec
+        setInterval(function(){ 
+                    realtime(); 
+                    
+                    //$("*").off(); 
+                   //$("script[src='chartData.js']").remove() 
+                   
+                   
+                   //$("#currentBPM2").remove().delay(800);
+                   //$.getScript("chartData.js");
+                   //window.location.reload(true);
+                }, 1000);
+
+       
+
+        //--------------------------
+        // Location Indoor Map
+        //--------------------------
+       /* var mymap = L.map('mapid').setView([4.385664, 100.966487],15);
+        //var circle = L.marker([4.383394, 100.966766]).addTo(mymap).bindPopup('You are here!').openPopup();
+       // var circle = L.marker([4.381918, 100.968257]).addTo(mymap);
+       // var circle = L.marker([4.382362, 100.967436]).addTo(mymap);
+        //var circle = L.marker([4.383394, 100.966766]).addTo(mymap);
+       // var circle = L.marker([4.384060, 100.966685]).addTo(mymap);
+       // var circle = L.marker([4.384878, 100.966578]).addTo(mymap);
+       // var circle = L.marker([4.385664, 100.966487]).addTo(mymap);
+       // var circle = L.marker([4.386130, 100.966423]).addTo(mymap);
+       // var circle = L.marker([4.386584, 100.966423]).addTo(mymap);
+
+      //  var circle = L.marker([4.387146, 100.966310]).addTo(mymap);
+       // var circle = L.marker([4.387531, 100.966315]).addTo(mymap);
+       // var circle = L.marker([4.387483, 100.965065]).addTo(mymap);
+       // var circle = L.marker([4.387344, 100.964293]).addTo(mymap);
+        //var circle = L.marker([4.386916, 100.963644]).addTo(mymap);
+        var circle = L.marker([4.386098, 100.963966]).addTo(mymap).bindPopup('You are here!').openPopup();
+      
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19
+            //attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' -->
+        }).addTo(mymap);
+
+
+        var latlngs = [
+        [4.381918, 100.968257],
+        [4.382362, 100.967436],
+        [4.383394, 100.966766],
+        [4.384060, 100.966685],
+        [4.384878, 100.966578],
+        [4.385664, 100.966487],
+        [4.386130, 100.966423],
+        [4.386584, 100.966423],
+        [4.387146, 100.966310],
+        [4.387531, 100.966315],
+        [4.387483, 100.965065],
+        [4.387344, 100.964293],
+        [4.386916, 100.963644],
+        [4.386098, 100.963966]
+        ]; 
+        
+        var path = L.polyline.antPath(latlngs, {
+            "delay": 400,
+            "dashArray": [
+                14,
+                20
+            ],
+            "weight": 5,
+            "color": "#0000FF",
+            "pulseColor": "#FFFFFF",
+            "paused": false,
+            "reverse": false,
+            "hardwareAccelerated": true
+            }).addTo(mymap);
+        
+        mymap.addLayer(path);
+        mymap.fitBounds(path.getBounds()); */
+        //--------------------------
+        // Temperature Chart
+        //--------------------------
+        //var lineChartData = {
+         /*   labels: ["0", "5", "7.5", "10", "11", "12", "13", "15"],
+            datasets: [{
+                    label: "SES 3.4",
+                    fillColor: "rgba(255,255,255,0)",
+                    strokeColor: "rgba(16,133,135,1)",
+                    pointColor: "rgba(16,133,135,1)",
+                    pointStrokeColor: "#fff",
+                    pointHighlightFill: "#fff",
+                    pointHighlightStroke: "rgba(16,133,135,1)",
+                    data: ["128.940", "131.397", "132.235", "128.235", "125.636", "127.271", "125.667", "129.554"]
+            }, {
+                    label: "SES 5.6",
+                    fillColor: "rgba(255,255,255,0)",
+                    strokeColor: "rgba(82,185,159,1)",
+                    pointColor: "rgba(82,185,159,1)",
+                    pointStrokeColor: "#fff",
+                    pointHighlightFill: "#fff",
+                    pointHighlightStroke: "rgba(82,185,159,1)", //green color
+                    data: ["128.948", "130.369", "131.038", "125.867", "121.893", "119.656", "119.026", "119.737"]
+            }, {
+                    label: "SES 6.7",
+                    fillColor: "rgba(255,255,255,0)",
+                    strokeColor: "rgba(242,175,62,1)",
+                    pointColor: "rgba(242,175,62,1)",
+                    pointStrokeColor: "#fff",
+                    pointHighlightFill: "#fff",
+                    pointHighlightStroke: "rgba(242,175,62,1)", //orange color
+                    data: ["127.473", "128.983", "129.327", "123.416", "118.829", "116.843", "117.190", "115.215"]
+            }, {
+                    label: "SES 8.9",
+                    fillColor: "rgba(255,255,255,0)",
+                    strokeColor: "rgba(236,83,62,1)",
+                    pointColor: "rgba(236,83,62,1)",
+                    pointStrokeColor: "#fff",
+                    pointHighlightFill: "#fff",
+                    pointHighlightStroke: "rgba(236,83,62,1)", //red color
+                    data: ["127.283", "125.147", "124.489", "116.783", "111.696", "110.563", "105.469", "104.332"]
+            }]
+
+    }
+
+    window.onload = function() {
+            var ctx = document.getElementById("chartTemp").getContext("2d");
+            window.myLine = new Chart(ctx).Line(lineChartData, {
+                    responsive: true
+            });
+    }
+*/
+    </script>
+
+    <!-- Optional JavaScript -->
+    <script src="map.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script> -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+<footer>
+    <div class="footer-copyright text-center py-3">© 2020 ISDP GROUP3 | <a href="http://www.linkedin.com/in/syukransoleh">Syukran.Dev</a>
+        
+        <!-- <a href="http://isdpfinalyear.epizy.com/"> :) </a> -->
+    </div>
+</footer>
+
+</html>

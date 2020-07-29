@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap');
+
+@font-face {
+    font-family: SegoeUI;
+    src:
+        local("Segoe UI"),
+        url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/normal/latest.woff2) format("woff2"),
+        url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/normal/latest.woff) format("woff"),
+        url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/normal/latest.ttf) format("truetype");
+    font-weight: 400;
+}
+
+
+.textHeader {
+    /* font-family: 'SegoeUI', sans-serif !important; */
+    font-weight: 300;
+}
+
+/* body {
+    background-color: black;
+    background-image: url("/img1.jpg");
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+} */
+
+
+
+
+
+.cardNoGap{
+    padding-top: 0;  
+    padding-left: 0;
+    padding-right: 0;  
+}
+
+@-webkit-keyframes blinker {
+    from {opacity: 1.0;}
+    to {opacity: 0.0;}
+}
+
+
+.blink{
+    text-decoration: blink;
+    -webkit-animation-name: blinker;
+    -webkit-animation-duration: 0.6s;
+    -webkit-animation-iteration-count:infinite;
+    -webkit-animation-timing-function:ease-in-out;
+    -webkit-animation-direction: alternate;
+}
