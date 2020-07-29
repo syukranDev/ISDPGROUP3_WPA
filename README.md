@@ -5,7 +5,8 @@ A Web Progressive Apps (WPA) was proposed and developed by me throughout the sem
 Final result can be seen at: http://isdpfinalyear.epizy.com
 
 ps: Credits for my teammates for the pre-recorded value in the Cloud.
-ps: best viewed using mobile browser.
+ps: The codes was done mainly for mobile browser usage, please expect some 'ugly element position' if open the link in desktop browser.
+ps: pls enjoy the reference :p
 
 Cheers.
 
