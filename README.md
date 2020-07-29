@@ -10,6 +10,7 @@ ps: The codes was done mainly for mobile browser usage, please expect some 'ugly
 
 Cheers.  
 
+![presentation_syukran_isdp](https://user-images.githubusercontent.com/51852197/88819004-fcfd3e80-d1f1-11ea-9a87-2834d003fa72.jpg)
 ![1](https://user-images.githubusercontent.com/51852197/88816718-44360000-d1ef-11ea-933d-1b5e2ba762ae.PNG)
 ![2](https://user-images.githubusercontent.com/51852197/88816707-41d3a600-d1ef-11ea-8d12-08e5437e06cd.PNG)
 ![3](https://user-images.githubusercontent.com/51852197/88816704-40a27900-d1ef-11ea-83fb-7c269c94a28c.PNG)
