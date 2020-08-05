@@ -6,7 +6,7 @@ Final result can be seen at: http://isdpfinalyear.epizy.com
 
 ps: Credits for my teammates for providing their own subsytem pre-recorded data && props to my lecturer SV for endless supports to my teams.  
 ps: The codes was done mainly for mobile browser usage, please expect some 'ugly element position' if open the link in desktop browser.  
-ps: (maybe) theres db credential somewhere inside the code, if you find one, do let me know am too lazy to dig up cus its free hosted anyway :-)
+ps: (maybe) theres db credential somewhere inside the code, if you find one, do let me know am too lazy to dig up cus its free hosted anyway & sharing purposes :-)
 
 
 Cheers.  
