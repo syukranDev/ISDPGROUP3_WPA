@@ -6,7 +6,7 @@ Final result can be seen at: http://isdpfinalyear.epizy.com
 
 ==========================================================================================
 
-EDIT:
+EDIT FOR CLARIFICATION:
 
 ps: Credits for my teammates for providing their own subsytem pre-recorded data (for my part individual demo only) 
     && props to my lecturer SV for endless supports to my teams.
