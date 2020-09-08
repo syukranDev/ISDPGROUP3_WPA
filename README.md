@@ -6,8 +6,11 @@ Final result can be seen at: http://isdpfinalyear.epizy.com
 
 ps: Credits for my teammates for providing their own subsytem pre-recorded data (for my part individual demo only) 
     && props to my lecturer SV for endless supports to my teams.
+
 ps: use MEGA_side.ino + elvern_function.ino & node_side.ino for real-time data transfer to cloud & apps.
+
 ps: The codes was done mainly for mobile browser usage, please expect some 'ugly element position' if open the link in desktop browser.  
+
 ps: (maybe) theres db credential somewhere inside the code, if you find one, do let me know am too lazy to dig up cus its free hosted anyway & sharing purposes :-)
 
 
