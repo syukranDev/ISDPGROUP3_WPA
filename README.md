@@ -8,7 +8,7 @@ Final result can be seen at: http://isdpfinalyear.epizy.com
 
 EDIT FOR CLARIFICATION:
 
-ps: Credits to my teammates for providing their own subsytem pre-recorded data (for my part individual demo only) 
+ps: Credits to my teammates for providing their own subsytem pre-recorded data (in order to demonstrate during individual demo only) 
     && props to my lecturer SV for endless supports to my teams.
 
 ps: use MEGA_side.ino + elvern_function.ino & node_side.ino for real-time data transfer to cloud & apps.
