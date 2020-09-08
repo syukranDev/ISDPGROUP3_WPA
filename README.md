@@ -4,6 +4,8 @@ A Web Progressive Apps (WPA) was proposed and developed by me throughout the sem
 
 Final result can be seen at: http://isdpfinalyear.epizy.com
 
+=====================================================================================================================================================
+
 EDIT:
 
 ps: Credits for my teammates for providing their own subsytem pre-recorded data (for my part individual demo only) 
@@ -15,9 +17,9 @@ ps: The codes was done mainly for mobile browser usage, please expect some 'ugly
 
 ps: (maybe) theres db credential somewhere inside the code, if you find one, do let me know am too lazy to dig up cus its free hosted anyway & sharing purposes :-)
 
-
 Cheers.  
 
+=========================================================================================================================================================
 ![presentation_syukran_isdp](https://user-images.githubusercontent.com/51852197/88819004-fcfd3e80-d1f1-11ea-9a87-2834d003fa72.jpg)
 ![1](https://user-images.githubusercontent.com/51852197/88816718-44360000-d1ef-11ea-933d-1b5e2ba762ae.PNG)
 ![2](https://user-images.githubusercontent.com/51852197/88816707-41d3a600-d1ef-11ea-8d12-08e5437e06cd.PNG)
