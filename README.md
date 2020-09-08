@@ -8,14 +8,15 @@ Final result can be seen at: http://isdpfinalyear.epizy.com
 
 EDIT FOR CLARIFICATION:
 
-[1] Credits to my teammates for providing their own subsytem pre-recorded data (in order to demonstrate during individual demo only) 
-    && props to my lecturer SV for endless supports to my teams.
+[1] First of all, props to my lecturer SV for for her endless guidance, wisdom, enthusiasm, time that she has spent with my teams. A truly dedicated lecturer.
 
-[2] Use MEGA_side.ino + elvern_function.ino & node_side.ino for real-time data transfer to cloud & apps. Edit the user credentials with your own db.
+[2] Credits to my teammates for providing their own subsytem pre-recorded data (in order to demonstrate during individual demo only, data file is excluded in the repository) 
 
-[3] The codes was mainly done for mobile browser usage, please expect some 'ugly element position' if open the link in desktop browser. 
+[3] Use MEGA_side.ino + elvern_function.ino & node_side.ino for real-time data transfer to cloud & apps. Edit the user credentials with your own db.
 
-[4] (MAYBE) there's db credential somewhere inside the code, if you find one, do let me know, am too lazy to dig up cus its free hosted anyway & sharing purposes :-)
+[4] The codes was mainly done for mobile browser usage, please expect some 'ugly element position' if open the link in desktop browser. 
+
+[5] (MAYBE) there's db credential somewhere inside the code, if you find one, do let me know, am too lazy to dig up cus its free hosted anyway & sharing purposes :-)
 
 Cheers.  
 
