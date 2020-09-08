@@ -1,10 +1,11 @@
-[Done] During my last semester at Universiti Teknologi PETRONAS, I was assigned to design "communication and apps" subsystem for my IoT group project under ISDP courses.
+During my last semester at Universiti Teknologi PETRONAS, I was assigned to design "communication and apps" subsystem for my IoT group project under ISDP courses.
 
 A Web Progressive Apps (WPA) was proposed and developed by me throughout the semester using HTML, CSS, Javascript, Jquery, PHP and MYSQL database. Frameworks such Bootstrap has been used intensively in order to make this happen.
 
 Final result can be seen at: http://isdpfinalyear.epizy.com
 
-ps: Credits for my teammates for providing their own subsytem pre-recorded data (for my part individual demo only) && props to my lecturer SV for endless supports to my teams.  
+ps: Credits for my teammates for providing their own subsytem pre-recorded data (for my part individual demo only) && props to my lecturer SV for endless supports to my teams.
+ps: use MEGA_side.ino + elvern_function.ino & node_side.ino for real-time data transfer to cloud & apps.
 ps: The codes was done mainly for mobile browser usage, please expect some 'ugly element position' if open the link in desktop browser.  
 ps: (maybe) theres db credential somewhere inside the code, if you find one, do let me know am too lazy to dig up cus its free hosted anyway & sharing purposes :-)
 
