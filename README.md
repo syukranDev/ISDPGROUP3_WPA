@@ -14,7 +14,7 @@ EDIT FOR CLARIFICATION:
 
 [3] Use MEGA_side.ino + elvern_function.ino & node_side.ino for real-time data transfer to cloud & apps. Edit the user credentials with your own db.
 
-[4] The codes was mainly done for mobile browser usage, please expect some 'ugly element position' if open the link in desktop browser. 
+[4] The codes was mainly done for mobile browser usage, please expect some 'ugly element position' if open the link in desktop browser. To open as mobile view, right click on the link homepage, select 'Inspect Element', and press mobile view at the top left corner.
 
 [5] (MAYBE) there's db credential somewhere inside the code, if you find one, do let me know, am too lazy to dig up cus its free hosted anyway & sharing purposes :-)
 
