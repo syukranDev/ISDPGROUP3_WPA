@@ -1,4 +1,4 @@
-During my last semester (MAY 2020) at Universiti Teknologi PETRONAS, I was assigned to design "communication and apps" subsystem for my IoT group project under ISDP courses.
+During my last semester (MAY 2020) at UTP, I was assigned to design "communication and apps" subsystem for my IoT group project under ISDP courses.
 
 A Web Progressive Apps (WPA) was proposed and developed by me throughout the semester using HTML, CSS, Javascript, Jquery, PHP and MYSQL database. Frameworks such Bootstrap, chartJs etc has been used intensively in order to make this happen.
 
