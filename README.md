@@ -6,19 +6,15 @@ Final result can be seen at: http://isdpfinalyear.epizy.com
 
 ==========================================================================================
 
-EDIT FOR CLARIFICATION:
+For Arduino codes:
+[1] Use MEGA_side.ino + elvern_function.ino & node_side.ino for real-time data transfer to cloud & apps. Edit the user credentials with your own db.
 
-[1] First of all, props to my lecturer SV for for her endless guidance, wisdom, enthusiasm, time that she has spent with my teams. A truly dedicated lecturer.
+For dashboard WPA:
+[1] The codes was mainly done for mobile browser usage, please expect some 'ugly element position' if open the link in desktop browser. To open as mobile view in your desktop browser, right click on the link homepage, select 'Inspect Element', and press mobile view at the top left corner.
 
-[2] Credits to my teammates for providing their own subsytem pre-recorded data (in order to demonstrate during individual demo only, data file is excluded in the repository) 
+[2] (MAYBE) there's db credential somewhere inside the code, if you find one, do let me know, am too lazy to dig up cus its free hosted anyway & sharing purposes :-)
 
-[3] Use MEGA_side.ino + elvern_function.ino & node_side.ino for real-time data transfer to cloud & apps. Edit the user credentials with your own db.
-
-[4] The codes was mainly done for mobile browser usage, please expect some 'ugly element position' if open the link in desktop browser. To open as mobile view in your desktop browser, right click on the link homepage, select 'Inspect Element', and press mobile view at the top left corner.
-
-[5] (MAYBE) there's db credential somewhere inside the code, if you find one, do let me know, am too lazy to dig up cus its free hosted anyway & sharing purposes :-)
-
-[6] [IMPORTANT] I dont upload new codes everytime i do some changes, thus some of the files in the repo are not updated.
+[2] [IMPORTANT] I dont upload new codes everytime i do some changes, thus some of the files in the repo are not updated.
 
 Cheers.  
 
