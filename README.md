@@ -14,7 +14,7 @@ For dashboard WPA:
 
 [2] (MAYBE) there's db credential somewhere inside the code, if you find one, do let me know, am too lazy to dig up cus its free hosted anyway & sharing purposes :-)
 
-[2] [IMPORTANT] I dont upload new codes everytime i do some changes, thus some of the files in the repo are not updated.
+[3] [IMPORTANT] I dont upload new codes everytime i do some changes, thus some of the files in the repo are not updated.
 
 Cheers.  
 
