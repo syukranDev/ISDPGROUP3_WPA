@@ -3,7 +3,7 @@ During my last semester (MAY 2020) at UTP, I was assigned to design "communicati
 A Web Progressive Apps (WPA) was proposed and developed by me throughout the semester using HTML, CSS, Javascript, Jquery, PHP and MYSQL database. Frameworks such Bootstrap, chartJs etc has been used intensively in order to make this happen.
 
 Final result can be seen at: http://isdpfinalyear.epizy.com
-
+[UPDATE: Link doesnt work anymore due to inactivity and shutted down by server provider.]
 ==========================================================================================
 
 For Arduino codes: <br />                                                                                                                                                           [1] Use MEGA_side.ino + elvern_function.ino & node_side.ino for real-time data transfer to database. Edit the user credentials with your own db.
